@@ -4,6 +4,7 @@ import { Text, Button } from 'react-native-elements';
 import { StackNavigator, TabNavigator } from "react-navigation";
 import Landing from "./app/screens/Landing";
 import Options from "./app/screens/Options";
+import Tips from "./app/screens/Tips";
 
 const headerStyle = {
   marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
@@ -28,6 +29,12 @@ export const Navigate = StackNavigator(
     },
     Options: {
       screen: Options,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    Tips: {
+      screen: Tips,
       navigationOptions: {
         header: null,
       },
